@@ -7,116 +7,116 @@ namespace Nik_Kon_Csharp.src
 {
     internal class Program
     {
-        public static void Main(string[] args)
-        {
-            Console.OutputEncoding = Encoding.UTF8;
-            Console.WriteLine("Tere! Hea Päev! Привет!");
+        //public static void Main(string[] args)
+        //{
+        //    Console.OutputEncoding = Encoding.UTF8;
+        //    Console.WriteLine("Tere! Hea Päev! Привет!");
 
-            RunFileOperations();
-            RunArrayTasks();
-            RunPersonExamples();
-            RunBasicInputLogic();
+        //    RunFileOperations();
+        //    RunArrayTasks();
+        //    RunPersonExamples();
+        //    RunBasicInputLogic();
 
-            Console.ReadKey();
-        }
+        //    Console.ReadKey();
+        //}
 
-        static void RunFileOperations()
-        {
-            Console.WriteLine("\n--- Faili töö kuudega ---");
-            FileUtils.ProcessMonthsFromFile();
-        }
+        //static void RunFileOperations()
+        //{
+        //    Console.WriteLine("\n--- Faili töö kuudega ---");
+        //    FileUtils.ProcessMonthsFromFile();
+        //}
 
-        static void RunArrayTasks()
-        {
-            Console.WriteLine("\nRuutude arvutamine (for):");
-            foreach (var r in ArrayUtils.GetSquares())
-                Console.WriteLine(r);
+        //static void RunArrayTasks()
+        //{
+        //    Console.WriteLine("\nRuutude arvutamine (for):");
+        //    foreach (var r in ArrayUtils.GetSquares())
+        //        Console.WriteLine(r);
 
-            Console.WriteLine("\n--------------------------------------------------");
-
-
-            Console.WriteLine("\nKahekordsed väärtused (foreach):");
-            foreach (var t in ArrayUtils.GetDoubled())
-                Console.WriteLine(t);
-
-            Console.WriteLine("\n--------------------------------------------------");
+        //    Console.WriteLine("\n--------------------------------------------------");
 
 
-            Console.WriteLine("\nKolmega jaguvad arvud (while):");
-            Console.WriteLine($"Kokku: {ArrayUtils.CountDivisibleByThree()}");
-            Console.WriteLine("\n--------------------------------------------------");
+        //    Console.WriteLine("\nKahekordsed väärtused (foreach):");
+        //    foreach (var t in ArrayUtils.GetDoubled())
+        //        Console.WriteLine(t);
+
+        //    Console.WriteLine("\n--------------------------------------------------");
 
 
-            Console.WriteLine("\nPositiivsed, negatiivsed ja nullid (foreach):");
-            ArrayUtils.CountPositiveNegativeZero();
-            Console.WriteLine("\n--------------------------------------------------");
+        //    Console.WriteLine("\nKolmega jaguvad arvud (while):");
+        //    Console.WriteLine($"Kokku: {ArrayUtils.CountDivisibleByThree()}");
+        //    Console.WriteLine("\n--------------------------------------------------");
 
 
-            Console.WriteLine("\n--- Keskmisest suuremad ja do-while osa ---");
-            ArrayUtils.PrintAboveAverageAndDoWhile();
-            Console.WriteLine("\n--------------------------------------------------");
+        //    Console.WriteLine("\nPositiivsed, negatiivsed ja nullid (foreach):");
+        //    ArrayUtils.CountPositiveNegativeZero();
+        //    Console.WriteLine("\n--------------------------------------------------");
 
 
-            Console.WriteLine("\n--- Suurima arvu ja indeksi leidmine ---");
-            ArrayUtils.FindLargestWithIndex();
-            Console.WriteLine("\n--------------------------------------------------");
+        //    Console.WriteLine("\n--- Keskmisest suuremad ja do-while osa ---");
+        //    ArrayUtils.PrintAboveAverageAndDoWhile();
+        //    Console.WriteLine("\n--------------------------------------------------");
 
 
-            Console.WriteLine("\n--- Paaris ja paaritu loendus ---");
-            ArrayUtils.CountEvenOdd();
-            Console.WriteLine("\n--------------------------------------------------");
-
-        }
-
-        static void RunPersonExamples()
-        {
-            List<string> names = TextUtils.ReadWordsFromConsole();
-            foreach (var name in names)
-                Console.WriteLine(name);
-
-            Console.WriteLine("\n--- Isiku näited ---");
-
-            Person person1 = new Person("Juku", 65, "12345678987", "Tallinn");
-            person1.PrintInfo();
-
-            Person person2 = new Person
-            {
-                Nimi = "Mari",
-                Aadress = "Tartu",
-                Isikukood = "98765432100",
-                Sugu = Sugu.Naine
-            };
-            person2.PrintInfo();
-
-            string[] nimed = { "a", "b", "c", "d", "e", "f", "g", "h", "j", "k" };
-            string[] aadressid = { "Tallinn", "Tartu", "Pärnu", "Narva", "Kohtla", "Jõhvi", "Ahtme", "Rakvere", "Moskva", "Saint-Petersburg" };
-            Console.WriteLine("\n--------------------------------------------------");
+        //    Console.WriteLine("\n--- Suurima arvu ja indeksi leidmine ---");
+        //    ArrayUtils.FindLargestWithIndex();
+        //    Console.WriteLine("\n--------------------------------------------------");
 
 
-            Console.WriteLine("---------- Massiiv isikutega ----------");
-            var people = PersonUtils.CreatePersons(nimed.Length, nimed, aadressid);
-            foreach (var p in people)
-                p.PrintInfo();
-            Console.WriteLine("\n--------------------------------------------------");
+        //    Console.WriteLine("\n--- Paaris ja paaritu loendus ---");
+        //    ArrayUtils.CountEvenOdd();
+        //    Console.WriteLine("\n--------------------------------------------------");
+
+        //}
+
+        //static void RunPersonExamples()
+        //{
+        //    List<string> names = TextUtils.ReadWordsFromConsole();
+        //    foreach (var name in names)
+        //        Console.WriteLine(name);
+
+        //    Console.WriteLine("\n--- Isiku näited ---");
+
+        //    Person person1 = new Person("Juku", 65, "12345678987", "Tallinn");
+        //    person1.PrintInfo();
+
+        //    Person person2 = new Person
+        //    {
+        //        Nimi = "Mari",
+        //        Aadress = "Tartu",
+        //        Isikukood = "98765432100",
+        //        Sugu = Sugu.Naine
+        //    };
+        //    person2.PrintInfo();
+
+        //    string[] nimed = { "a", "b", "c", "d", "e", "f", "g", "h", "j", "k" };
+        //    string[] aadressid = { "Tallinn", "Tartu", "Pärnu", "Narva", "Kohtla", "Jõhvi", "Ahtme", "Rakvere", "Moskva", "Saint-Petersburg" };
+        //    Console.WriteLine("\n--------------------------------------------------");
 
 
-            Console.WriteLine("---------- List tagurpidi ----------");
-            var peopleList = PersonUtils.CreatePersonsReversed(nimed, aadressid);
-            foreach (var p in peopleList)
-                p.PrintInfo();
-            Console.WriteLine("\n--------------------------------------------------");
+        //    Console.WriteLine("---------- Massiiv isikutega ----------");
+        //    var people = PersonUtils.CreatePersons(nimed.Length, nimed, aadressid);
+        //    foreach (var p in people)
+        //        p.PrintInfo();
+        //    Console.WriteLine("\n--------------------------------------------------");
 
 
-            Console.WriteLine("------ while-loop ------");
-            int i = nimed.Length;
-            while (i >= 0)
-            {
-                Console.WriteLine(i);
-                i--;
-            }
-            Console.WriteLine("\n--------------------------------------------------");
+        //    Console.WriteLine("---------- List tagurpidi ----------");
+        //    var peopleList = PersonUtils.CreatePersonsReversed(nimed, aadressid);
+        //    foreach (var p in peopleList)
+        //        p.PrintInfo();
+        //    Console.WriteLine("\n--------------------------------------------------");
 
-        }
+
+        //    Console.WriteLine("------ while-loop ------");
+        //    int i = nimed.Length;
+        //    while (i >= 0)
+        //    {
+        //        Console.WriteLine(i);
+        //        i--;
+        //    }
+        //    Console.WriteLine("\n--------------------------------------------------");
+
+        //}
 
         static void RunBasicInputLogic()
         {
