@@ -169,7 +169,19 @@ namespace Nik_Kon_Csharp.src
             Console.ReadKey();
             Console.WriteLine("\n--------------------------------------------------");
 
-            //-------------------------------------------------------------------------------------
+            //----------------------------------------------------------------------------------\\
+
+            Console.WriteLine("\n=== Kangelaste agentuur (klassid ja faililugemine) ===\n");
+            HeroUtils.Run();
+
+            Console.WriteLine("\nVajuta Enter jätkamiseks...");
+            Console.ReadLine();
+
+            Console.WriteLine("\nProgrammi lõpp. Vajuta klahvi...");
+            Console.ReadKey();
+            Console.WriteLine("\n--------------------------------------------------");
+
+            //-------------------------------------------------------------------------------------\\
 
             Console.WriteLine("Double arv: ");
             double dValue = Convert.ToDouble(Console.ReadLine());
